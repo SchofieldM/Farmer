@@ -4,7 +4,7 @@ package main.com.Game;
  * Handles turn operations for the game
  *
  * @author Matthew Schofield
- * @version 1.4.18
+ * @version 3.8.18
  */
 public class TurnHandler {
 
@@ -52,7 +52,7 @@ public class TurnHandler {
     public String nextTurn()
     {
         turnNumber++;
-        return rgEventHandler.event() + rgEventHandler.randomMapEvent();
+        return rgEventHandler.event() + " " + rgEventHandler.randomMapEvent();
     }
 
 }
