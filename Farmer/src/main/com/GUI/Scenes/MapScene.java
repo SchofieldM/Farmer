@@ -47,7 +47,7 @@ public class MapScene extends Scene {
      */
     public MapScene(GUI gui, Map map)
     {
-        super("mapScene");
+        super(SceneName.MapScene);
         this.map = map;
         this.gui = gui;
         this.imgGrphHandler = new ImageGraphicsHandler();

@@ -42,7 +42,7 @@ public class StoreScene extends Scene {
      */
     public StoreScene(GUI gui)
     {
-        super("storeScene");
+        super(SceneName.StoreScene);
         this.gui = gui;
         this.player = gui.getPlayer();
         createStorePanel();

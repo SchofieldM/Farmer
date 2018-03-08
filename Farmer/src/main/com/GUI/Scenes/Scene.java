@@ -16,7 +16,7 @@ public abstract class Scene {
     // JPanel
         protected JPanel scene;
     // String
-        protected String sceneName;
+        protected SceneName sceneName;
 
 // Constructor
 
@@ -29,7 +29,7 @@ public abstract class Scene {
      *
      * @param sceneName to allow the program to identify the scene coherently
      */
-    public Scene(String sceneName)
+    public Scene(SceneName sceneName)
     {
         this.scene = null;
         this.sceneName = sceneName;
@@ -55,7 +55,7 @@ public abstract class Scene {
      *
      * @return the scene's name
      */
-    public String getSceneName()
+    public SceneName getSceneName()
     {
         return sceneName;
     }

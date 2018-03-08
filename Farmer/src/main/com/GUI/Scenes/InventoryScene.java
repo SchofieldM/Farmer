@@ -32,7 +32,7 @@ public class InventoryScene extends Scene {
      */
     public InventoryScene(GUI gui)
     {
-        super("inventoryScene");
+        super(SceneName.InventoryScene);
         this.gui = gui;
         this.player = gui.getPlayer();
         createInventoryPanel();

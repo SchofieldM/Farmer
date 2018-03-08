@@ -38,7 +38,7 @@ public class GarageScene extends Scene{
 
     public GarageScene(GUI gui, Garage garage)
     {
-        super("garageScene");
+        super(SceneName.GarageScene);
         this.gui = gui;
         this.player = gui.getPlayer();
         this.farm = garage.getFarm();
