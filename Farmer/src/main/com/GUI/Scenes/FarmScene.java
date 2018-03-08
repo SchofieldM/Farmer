@@ -56,7 +56,7 @@ public class FarmScene extends Scene {
      */
     public FarmScene(GUI gui, Farm farm)
     {
-        super("farmScene");
+        super(SceneName.FarmScene);
         this.farm = farm;
         this.gui = gui;
         this.player = gui.getPlayer();
