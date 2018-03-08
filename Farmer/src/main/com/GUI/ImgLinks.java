@@ -12,25 +12,25 @@ package main.com.GUI;
  * Enumerations for the img links of the program
  *
  * @author Matthew Schofield
- * @version 1.4.18
+ * @version 3.7.18
  */
 public enum ImgLinks {
 
 // Enumerations
+	EmptyPlot("/Images/emptyPlot.png"),
+    EmptyField("/Images/emptyField.png"),
+    Farm("/Images/farmIcon.png"),
     FavIcon("/Images/farmIcon.png"),
     GameCover("/Images/farm.png"),
-    EmptyPlot("/Images/emptyPlot.png"),
-    EmptyField("/Images/emptyField.png"),
-    MainBuilding("/Images/mainBuilding.png"),
-    GrowingField("/Images/growingField.png"),
-    HarvestReadyField("/Images/harvestReadyField.jpg"),
-    GrassLand("/Images/grasslandMapIcon.png"),
-    GarageFloor("/Images/garageFloor.png"),
-    Farm("/Images/farmIcon.png"),
     Garage("/Images/garage.png"),
+    GarageFloor("/Images/garageFloor.png"),
+    GrassLand("/Images/grasslandMapIcon.png"),
+    GrowingField("/Images/growingField.png"),
     Harvester("/Images/harvester.png"),
+    HarvestReadyField("/Images/harvestReadyField.jpg"),
+    MainBuilding("/Images/mainBuilding.png"),
+    PlaceHolder("/Images/placeholder.png"),
     Planter("/Images/planter.png"),
-    PlaceHolder("/Images/placeholder.png")
     ;
 
 // Construction of Enum
@@ -49,6 +49,7 @@ public enum ImgLinks {
     }
 
 // Method
+    // String
     /**
      * Overrides the standard toString method so the enumerated Strings (img links) can be used
      *
@@ -59,6 +60,7 @@ public enum ImgLinks {
         return imgLink;
     }
 
+    // URL
     /**
      * Accessor for the URL of the image
      *
@@ -69,6 +71,7 @@ public enum ImgLinks {
         return this.getClass().getResource(imgLink);
     }
 
+    // Image
     /**
      * Accessor for the Image linked to
      *
@@ -79,6 +82,7 @@ public enum ImgLinks {
         return getImageIcon().getImage();
     }
 
+    // JLabel
     /**
      * Accessor method for a JLabel with a scaled ImageIcon of the linked Image
      *
@@ -91,6 +95,7 @@ public enum ImgLinks {
         return new JLabel(new ImageIcon((new ImageGraphicsHandler()).scaleImage(getURL(), width, height)));
     }
 
+    // ImageIcon
     /**
      * Accessor method for an ImageIcon of the linked Image with a given width and height
      *
