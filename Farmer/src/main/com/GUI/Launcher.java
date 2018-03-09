@@ -104,8 +104,12 @@ public class Launcher {
         
         // Add components to the window
         mainWindow.setContentPane(createMainPanel());
-        mainPanel.add(createContentPanel());
+        mainPanel.add(createContentPanel());        
+
+        constraints.gridwidth = 2;
         contentPanel.add(createCoverImage(), constraints);
+        
+        constraints.gridy++;
         contentPanel.add(createGUIButton(), constraints);
     }
     
@@ -117,6 +121,10 @@ public class Launcher {
         constraints = new GridBagConstraints();
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.weightx = 1;
+
+        // Start points 0,0
+        constraints.gridx = 0;
+        constraints.gridy = 0;
     }
 
     // JPanel
@@ -139,6 +147,7 @@ public class Launcher {
         return contentPanel;
     }
 
+    // JComponent
     /**
      * Add cover
      */
@@ -150,9 +159,6 @@ public class Launcher {
         logoLabel = GameCover.getScaledLabel(gameCoverWidth, gameCoverHeight);
 
         // Adds the cover to the window
-        constraints.gridx = 0;
-        constraints.gridy = 0;
-        constraints.gridwidth = 2;
         return logoLabel;
     }
 
@@ -170,9 +176,7 @@ public class Launcher {
         newGameButton.setBackground(new Color(200, 70, 0));
         newGameButton.setBorder(new LineBorder(Color.GREEN));
 
-        // Adding to the panel
-        constraints.gridx = 1;
-        constraints.gridy = 3;
+        
         return newGameButton;
     }
 

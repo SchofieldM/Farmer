@@ -23,7 +23,7 @@ public class GUI {
 
 // Fields
     // String
-        private String sceneName;
+        private SceneName sceneName;
     //Map
         private Map map;
     // Player
@@ -91,19 +91,19 @@ public class GUI {
     {
         sceneName = scene.getSceneName();
         switch(sceneName){
-            case "farmScene":
+            case FarmScene:
                 setScene(new FarmScene(this, ((FarmScene) scene).getFarm()));
                 break;
-            case "mapScene":
+            case MapScene:
                 setScene(new MapScene(this, map));
                 break;
-            case "inventoryScene":
+            case InventoryScene:
                 setScene(new InventoryScene(this));
                 break;
-            case "storeScene":
+            case StoreScene:
                 setScene(new StoreScene(this));
                 break;
-            case "garageScene":
+            case GarageScene:
                 setScene(new GarageScene(this, ((GarageScene)scene).getGarage()));
                 break;
             default:

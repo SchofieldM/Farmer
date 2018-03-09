@@ -33,6 +33,7 @@ public class ImageGraphicsHandler
      */
     public Image scaleImage(URL imgLink, int width, int height)
     {
+    	System.out.println(imgLink);
         // Creates an ImageIcon to then extract the Image from
         ImageIcon initialImage = new ImageIcon(imgLink);
 
