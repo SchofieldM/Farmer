@@ -171,7 +171,6 @@ public class Launcher {
         // Construction of the newGame button
         newGameButton = new JButton("New Game!");
         newGameButton.addActionListener(e -> launchNewGame());
-
         // Styling of play button
         newGameButton.setBackground(new Color(200, 70, 0));
         newGameButton.setBorder(new LineBorder(Color.GREEN));
