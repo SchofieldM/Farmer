@@ -17,20 +17,20 @@ package main.com.GUI;
 public enum ImgLinks {
 
 // Enumerations
-	EmptyPlot("/Images/emptyPlot.png"),
-    EmptyField("/Images/emptyField.png"),
-    Farm("/Images/farmIcon.png"),
-    FavIcon("/Images/farmIcon.png"),
-    GameCover("/Images/farm.png"),
-    Garage("/Images/garage.png"),
-    GarageFloor("/Images/garageFloor.png"),
-    GrassLand("/Images/grasslandMapIcon.png"),
-    GrowingField("/Images/growingField.png"),
-    Harvester("/Images/harvester.png"),
-    HarvestReadyField("/Images/harvestReadyField.jpg"),
-    MainBuilding("/Images/mainBuilding.png"),
-    PlaceHolder("/Images/placeholder.png"),
-    Planter("/Images/planter.png"),
+	EmptyPlot("/emptyPlot.png"),
+    EmptyField("/emptyField.png"),
+    Farm("/farmIcon.png"),
+    FavIcon("/farmIcon.png"),
+    GameCover("/farm.png"),
+    Garage("/garage.png"),
+    GarageFloor("/garageFloor.png"),
+    GrassLand("/grasslandMapIcon.png"),
+    GrowingField("/growingField.png"),
+    Harvester("/harvester.png"),
+    HarvestReadyField("/harvestReadyField.jpg"),
+    MainBuilding("/mainBuilding.png"),
+    PlaceHolder("/placeholder.png"),
+    Planter("/planter.png"),
     ;
 
 // Construction of Enum
@@ -68,6 +68,9 @@ public enum ImgLinks {
      */
     public URL getURL()
     {
+    	System.out.println("getURL");
+    	System.out.println("Link: " + imgLink);
+    	System.out.println("Followed Link: " + this.getClass().getResource(imgLink));
         return this.getClass().getResource(imgLink);
     }
 
@@ -115,6 +118,8 @@ public enum ImgLinks {
      */
     public ImageIcon getImageIcon()
     {
+    	System.out.println(getURL());
+    	System.out.println("\n\n\n ----- \n\n\n");
         return new ImageIcon(getURL());
     }
 
