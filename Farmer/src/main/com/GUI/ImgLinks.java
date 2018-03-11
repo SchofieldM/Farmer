@@ -68,9 +68,6 @@ public enum ImgLinks {
      */
     public URL getURL()
     {
-    	System.out.println("getURL");
-    	System.out.println("Link: " + imgLink);
-    	System.out.println("Followed Link: " + this.getClass().getResource(imgLink));
         return this.getClass().getResource(imgLink);
     }
 
@@ -118,8 +115,6 @@ public enum ImgLinks {
      */
     public ImageIcon getImageIcon()
     {
-    	System.out.println(getURL());
-    	System.out.println("\n\n\n ----- \n\n\n");
         return new ImageIcon(getURL());
     }
 
