@@ -63,17 +63,26 @@ public class GarageScene extends Scene{
     {
         scene = new JPanel();
         configureLayout();
+        
+        JButton backButton = new JButton("Back");
+        backButton.addActionListener(e -> gui.setScene(new FarmScene(gui, farm)));
+        
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        
+        scene.add(backButton,constraints);
+        
         int x = 0;
-        int y = 0;
+        int y = 1;
         for(Machine[] row : garage.getMachines())
         {
             for(Machine machine : row){
                 constraints.gridx = x;
                 constraints.gridy = y;
                 if(machine != null)
-                    scene.add(makeButtonOfMachine(machine), constraints);
+                	scene.add(makeButtonOfMachine(machine), constraints);
                 else{
-                    scene.add(makeEmptySlotButton(x,y), constraints);
+                	scene.add(makeEmptySlotButton(x,y), constraints);
                 }
                 x++;
             }
