@@ -31,6 +31,7 @@ public enum ImgLinks {
     MainBuilding("/mainBuilding.png"),
     PlaceHolder("/placeholder.png"),
     Planter("/planter.png"),
+    Town("/town.png"),
     ;
 
 // Construction of Enum
