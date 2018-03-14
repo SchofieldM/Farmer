@@ -9,7 +9,7 @@ public class Town extends MapObject{
 
     public Town()
     {
-        super("Town", ImgLinks.PlaceHolder);
+        super("Town", ImgLinks.Town);
     }
 
 }
